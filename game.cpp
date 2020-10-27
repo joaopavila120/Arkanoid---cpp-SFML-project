@@ -1,2 +1,45 @@
-teste git 
-vamos fazer q jogo amigos?
+//bibliotecas
+#include <SFML/Graphics.hpp>
+#include <time.h>
+
+
+using namespace sf;
+
+int main(){
+ //Janela
+    RenderWindow app(VideoMode(520, 450), "Arkanoid!");//janela com o nome
+    app.setFramerateLimit(60); // limitar frame
+ 
+  //Texturas do fundo,bolinha,nave,asteroide
+    Texture t1,t2,t3,t4;
+    t1.loadFromFile("images/block01.png");
+    t2.loadFromFile("images/background.jpg");
+    t3.loadFromFile("images/ball.png");
+    t4.loadFromFile("images/paddle.png");
+
+    Sprite sBackground(t2), sBall(t3), sPaddle(t4); //sprites
+    sPaddle.setPosition(300,440); //posicionar a nave
+  
+  
+  
+  
+  
+  while (app.isOpen()) //quando abre o jogo
+    {
+       Event e;//cria um evento
+       while (app.pollEvent(e))
+       {
+         if (e.type == Event::Closed) //fechar o jgo
+             app.close();
+       }
+    
+    app.clear();
+    app.draw(sBackground);//desenha o fundo
+    app.draw(sBall); // desenha o bolinea
+    app.draw(sPaddle);//desenha a nave
+      app.display();
+
+   }
+
+  return 0;
+}
