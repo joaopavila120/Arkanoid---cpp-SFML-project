@@ -20,6 +20,20 @@ int main(){
     Sprite sBackground(t2), sBall(t3), sPaddle(t4); //sprites
     sPaddle.setPosition(300,440); //posicionar a nave
   
+    Sprite block[1000];//sprites
+
+    int n=0;
+    for (int i=1;i<=10;i++)
+    for (int j=1;j<=10;j++)
+      {
+        block[n].setTexture(t1); //setar as texturas
+        block[n].setPosition(i*43,j*20); //setar o lugar delas
+        n++;
+      }
+
+    float dx=4, dy=5;//velocidade bola
+    float x=300, y=300;//setar bolinea
+
   
   
   
