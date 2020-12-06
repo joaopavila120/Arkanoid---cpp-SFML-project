@@ -7,8 +7,8 @@ using namespace sf;
 
 int main(){
  //Janela
-    RenderWindow app(VideoMode(520, 450), "Arkanoid!");//janela com o nome
-    app.setFramerateLimit(60); // limitar frame
+    RenderWindow game(VideoMode(520, 450), "Arkanoid!");//janela com o nome
+    game.setFramerateLimit(60); // limitar frame
  
   //Texturas do fundo,bolinha,nave,asteroide
     Texture t1,t2,t3,t4;
@@ -38,16 +38,16 @@ int main(){
   
   
   
-  while (app.isOpen()) //quando abre o jogo
+  while (game.isOpen()) //quando abre o jogo
   {
      Event ev;//cria um evento
-     while (app.pollEvent(ev))
+     while (game.pollEvent(ev))
      {
        if (ev.type == Event::Closed) //fechar o jgo e tecla esc pra close
-       app.close();
+       game.close();
        else if(ev.type == Event::KeyPressed){
            if(ev.key.code==Keyboard::Escape)
-           app.close();
+           game.close();
      }
      }
     
@@ -76,13 +76,13 @@ int main(){
 
     sBall.setPosition(x,y);//bolinea posição inicial
 
-    app.clear();
-    app.draw(sBackground);//desenha o fundo
-    app.draw(sBall); // desenha o bolinea
-    app.draw(sPaddle);//desenha a nave
+    game.clear();
+    game.draw(sBackground);//desenha o fundo
+    game.draw(sBall); // desenha o bolinea
+    game.draw(sPaddle);//desenha a nave
     for (int i=0;i<n;i++) //desenha o asteroide e posi
-    app.draw(block[i]);
-    app.display();
+    game.draw(block[i]);
+    game.display();
 
    }
 
