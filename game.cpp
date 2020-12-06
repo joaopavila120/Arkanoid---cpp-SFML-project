@@ -5,6 +5,8 @@
 
 using namespace sf;
 
+int pt = 0;//para marcar os pontos
+
 int main(){
  //Janela
     RenderWindow game(VideoMode(520, 450), "Arkanoid!");//janela com o nome
@@ -21,6 +23,15 @@ int main(){
     sPaddle.setPosition(300,440); //posicionar a nave
   
     Sprite block[1000];//sprites
+
+    Font AtariSmall; //declara a fonte do atari
+    AtariSmall.loadFromFile("AtariSmall.ttf"); //carrega o arquivo da fonte
+
+    sf::Text pontos; //define o texto para aparecer
+    pontos.setFont(AtariSmall); //cor
+    pontos.setFillColor(Color::White); //define cor
+    pontos.setCharacterSize(25); //tamanho fonte
+    pontos.setPosition(0 ,0); //posição do texto
 
     int n=0;
     for (int i=1;i<=10;i++)
@@ -56,14 +67,14 @@ int main(){
     for (int i=0;i<n;i++)
         if ( FloatRect(x+3,y+3,6,6).intersects(block[i].getGlobalBounds()) ) {
           block[i].setPosition(-100,0); dx=-dx; //tira o bloco e muda a direção da bolinha
-          
+          pt++;//soma um ponto ao tirar um bloco
         }
 
     y+=dy;
     for (int i=0;i<n;i++)
         if ( FloatRect(x+3,y+3,6,6).intersects(block[i].getGlobalBounds()) ){
           block[i].setPosition(-100,0); dy=-dy;//tira o bloco e muda a direção da bolinha
-           
+          pt++;//soma um ponto ao tirar um bloco
         }
     //muda a direção da bolinha
     if (x<0 || x>520)  dx=-dx;
@@ -82,6 +93,8 @@ int main(){
     game.draw(sPaddle);//desenha a nave
     for (int i=0;i<n;i++) //desenha o asteroide e posi
     game.draw(block[i]);
+    pontos.setString(std::to_string(pt)); //seta os pontos pra aparecer
+    game.draw(pontos); //coloca os pontos na tela
     game.display();
 
    }
