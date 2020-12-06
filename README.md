@@ -1,7 +1,7 @@
 # SFMLgame
 #**Como rodar o game:**
-Para rodar o jogo clonar o repositório, abrir no terminal e rodar o seguinte comando: g++ main.cpp -o main -lsfml-graphics -lsfml-window -lsfml-system
-Após isso digitar ./main que deverá abrir o Arkanoid.
+Para rodar o jogo clonar o repositório, abrir no terminal e rodar o seguinte comando: g++ game.cpp -o game -lsfml-graphics -lsfml-window -lsfml-system
+Após isso digitar ./game que deverá abrir o Arkanoid.
 
 Sistema de pontuação em beta.
 
