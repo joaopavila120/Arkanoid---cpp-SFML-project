@@ -97,10 +97,10 @@ int main(){
     {
       vidas--;
     }
-    if (vidas == 0)
+    if (vidas == 0) //chegou no 0 game over
     {
-      x = 0;
-      y = -100;
+      x = 0;//tirar a bolinha da tela
+      y = -100;// tirar a bolinha da tela
       GameOver.setString("Game Over");
     }
     
