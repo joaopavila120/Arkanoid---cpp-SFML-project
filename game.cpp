@@ -50,7 +50,7 @@ int main(){
     GameOver.setFont(AtariSmall); //cor
     GameOver.setFillColor(Color::Green); //define cor
     GameOver.setCharacterSize(50); //tamanho fonte
-    GameOver.setPosition(200, 200); //posição do texto
+    GameOver.setPosition(140, 220); //posição do texto
 
 
     int n=0;
@@ -76,7 +76,7 @@ int main(){
              if(ev.key.code==Keyboard::Escape)
              game.close();
        }
-       }
+      }
 
     //se a bolinha a bolinha bater no asteroide ele vai sumindo
     x+=dx;
@@ -99,6 +99,8 @@ int main(){
     }
     if (vidas == 0)
     {
+      x = 0;
+      y = -100;
       GameOver.setString("Game Over");
     }
     
