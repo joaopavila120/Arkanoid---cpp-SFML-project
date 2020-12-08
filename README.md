@@ -9,6 +9,8 @@ Setas do teclado controlam a barra.
 
 Tenha um bom jogo e lembre-se o game ainda se encontra em fase beta!
 
+OBS: Nick, data e hora se encontram em desenvolvimento até o momento;
+
 
 
 
