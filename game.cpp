@@ -18,10 +18,11 @@ int main(){
     //Texturas do fundo,bolinha,nave,asteroide
 
     Texture t1,t2,t3,t4,t5;
-    t1.loadFromFile("images/block01.png");
-    t2.loadFromFile("images/background.jpg");
-    t3.loadFromFile("images/ball.png");
-    t4.loadFromFile("images/paddle.png");
+    t1.loadFromFile("img/block01.png");
+    t2.loadFromFile("img/background.jpg");
+    t3.loadFromFile("img/ball.png");
+    t4.loadFromFile("img/paddle.png");
+    //t5.loadFromFile("img/game over.jpg");
     //t5.loadFromFile("images/game over.jpg");
 
     Sprite sBackground(t2), sBall(t3), sPaddle(t4); //sprites
