@@ -7,9 +7,7 @@ Sistema de pontuação em beta.
 
 Setas do teclado controlam a barra. 
 
-Tenha um bom jogo e lembre-se o game ainda se encontra em fase beta!
-
-OBS: Nick, data e hora se encontram em desenvolvimento até o momento;
+![image](https://user-images.githubusercontent.com/67394574/148686181-1c8c85ee-a39d-46bd-807a-b32ef1f055f3.png)
 
 
 
